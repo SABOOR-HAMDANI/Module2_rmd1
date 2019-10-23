@@ -3,8 +3,10 @@ title: "Module2 - R  Markdown Document 1"
 author: "Saboor Hamdani"
 date: "10/22/2019"
 output:
-  word_document: default
   html_document: default
+  word_document: default
+editor_options: 
+  chunk_output_type: inline
 ---
 
 ```{r setup, include=FALSE}
@@ -89,5 +91,21 @@ You can also embed plots, for example:
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
+```{r pressure2, fig.height=4, fig.width=4}
+plot(pressure)
+```
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## unsert tables
+```{r}
+knitr::kable(head(cars),
+            caption= "Top 6 rows of cars dataset")
+```
+
+
+## insert an euation
+
+$$ Y= \beta_0 + \beta_1x  $$
+
